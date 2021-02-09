@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import org.apache.cxf.jaxws.JAXWSMethodInvoker;
 import org.apache.cxf.message.Exchange;
 import org.apache.cxf.service.invoker.Factory;
-import org.springframework.http.converter.json.GsonBuilderUtils;
 
 import javax.xml.ws.spi.Invoker;
 import java.lang.reflect.Method;
