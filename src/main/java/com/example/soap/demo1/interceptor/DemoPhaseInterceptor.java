@@ -16,4 +16,5 @@ public class DemoPhaseInterceptor extends AbstractPhaseInterceptor {
     public void handleMessage(Message message) throws Fault {
         System.out.println(this.getClass().getSimpleName()+"（拦截器）："+message);
     }
+
 }

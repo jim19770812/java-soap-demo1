@@ -2,12 +2,14 @@ package com.example.soap.demo1.config;
 
 import com.example.soap.demo1.factorybean.DemoJaxWsServerFactoryBean;
 import com.example.soap.demo1.interceptor.DemoPhaseInterceptor;
+import com.example.soap.demo1.invoker.DemoJAXWSMethodInvoker;
 import com.example.soap.demo1.service.UserService;
 import com.google.common.collect.Lists;
 import org.apache.cxf.Bus;
 import javax.xml.ws.Endpoint;
 
 import org.apache.cxf.jaxws.EndpointImpl;
+import org.apache.cxf.jaxws.JaxWsServerFactoryBean;
 import org.apache.cxf.transport.servlet.CXFServlet;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;

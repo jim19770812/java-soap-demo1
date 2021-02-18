@@ -16,12 +16,12 @@ public interface UserService {
      * @return
      */
     //@WebMethod(operationName = "hello") //这样定义会报错 The given SOAPAction http://127.0.0.1:8080/soap/user does not match an operation.
-    @WebMethod(operationName = "hello", action = "http://127.0.0.1:8080/soap/user") //这样定义ok
+    @WebMethod(operationName = "hello", action = "hello") //这样定义ok
     String hi(final String name, String gender);
 
-    @WebMethod(operationName = "hello2", action = "http://127.0.0.1:8080/soap/user") //这样定义ok
+    @WebMethod(operationName = "hello2", action = "hello2") //这样定义ok
     String hi2(final List<String> names);
 
-    @WebMethod(operationName = "hello3", action = "http://127.0.0.1:8080/soap/user") //这样定义ok
+    @WebMethod(operationName = "hello3", action = "hello3") //这样定义ok
     String hi3(final UserBean user);
 }
