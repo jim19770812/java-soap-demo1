@@ -17,6 +17,7 @@ public interface UserService {
      * operationName：在wsdl文档中显示的方法名
      * wsdl地址：http://127.0.0.1:8080/soap/user?wsdl
      * action：是对应的服务完整url，如果不指定，使用CXF客户端是可以正常调用的，但别的客户端会报错 The given SOAPAction http://127.0.0.1:8080/soap/user does not match an operation.
+     * 最麻烦的是@WebService的targetNamespace，可以在http://127.0.0.1:8080/soap/user?wsdl页面中获取（其中的namespaceURI值）
      * @param name
      * @return
      */
