@@ -6,11 +6,16 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 import java.util.List;
 
-@WebService(targetNamespace = "http://service.springbootcxfdemo.demo.com", serviceName = "user", name = "u")
+@WebService(
+        endpointInterface = "com.example.soap.demo1.service.UserService", //完整类名
+        targetNamespace = "http://UserService.service.demo1.soap.example.com/", //url需要反写endpointInterface并且最后以/结尾
+        serviceName = "user",
+        name = "u")
 public interface UserService {
     /**
      * 对外暴露的webservice接口
      * operationName：在wsdl文档中显示的方法名
+     * wsdl地址：http://127.0.0.1:8080/soap/user?wsdl
      * action：是对应的服务完整url，如果不指定，使用CXF客户端是可以正常调用的，但别的客户端会报错 The given SOAPAction http://127.0.0.1:8080/soap/user does not match an operation.
      * @param name
      * @return
