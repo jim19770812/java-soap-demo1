@@ -4,7 +4,12 @@ import com.example.soap.demo1.factorybean.DemoJaxWsServerFactoryBean;
 import com.example.soap.demo1.interceptor.DemoPhaseInterceptor;
 import com.example.soap.demo1.service.UserService;
 import com.google.common.collect.Lists;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.cxf.Bus;
+
+import javax.annotation.PostConstruct;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletRegistration;
 import javax.xml.ws.Endpoint;
 
 import org.apache.cxf.jaxws.EndpointImpl;
@@ -16,11 +21,23 @@ import org.springframework.context.annotation.Configuration;
 import javax.annotation.Resource;
 
 @Configuration
+@Slf4j
 public class CXFConfig {
     @Resource
     private Bus bus;
     @Resource
     private UserService userService;
+
+//    /**
+//     * Initialize cxf -ws
+//     */
+//    @PostConstruct
+//    private void initCxf(ServletContext servletContext) {
+//        log.debug("Initialize cxf -ws");
+//        ServletRegistration.Dynamic cxfServlet=servletContext.addServlet("CxfWS", new CXFServlet());
+//        cxfServlet.addMapping("/soap/*");
+//        cxfServlet.setLoadOnStartup(3);
+//    }
 
     @Bean
     public ServletRegistrationBean servletRegistration(){

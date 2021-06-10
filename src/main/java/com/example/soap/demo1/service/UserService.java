@@ -7,7 +7,7 @@ import javax.jws.WebService;
 import java.util.List;
 
 @WebService(
-        endpointInterface = "com.example.soap.demo1.service.UserService", //完整类名
+        endpointInterface = "com.example.soap.demo1.service.UserService", //接口的完整类名
         targetNamespace = "http://UserService.service.demo1.soap.example.com/", //url需要反写endpointInterface并且最后以/结尾
         serviceName = "user",
         name = "u")
